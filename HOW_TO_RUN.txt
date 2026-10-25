@@ -1,0 +1,39 @@
+Signova — Run on Your PC (Windows)
+==================================
+
+STEP 1 — Install Python (one time)
+  • Download Python 3.10 or newer from https://www.python.org/downloads/
+  • During install, CHECK "Add python.exe to PATH"
+  • Open Command Prompt and type:  python --version
+
+STEP 2 — Extract this folder
+  • Unzip Signova anywhere, e.g.  C:\Users\YourName\Signova
+
+STEP 3 — Install dependencies (first time only)
+  • Double-click:  install.bat
+  • Wait until it says "Dependencies installed."
+
+STEP 4 — Start the web app
+  • Double-click:  start.bat
+  • Keep that window OPEN while using the app
+  • Your browser opens:  http://127.0.0.1:8000/
+
+STEP 5 — Use Signova
+  • Click "Start Camera Feed" and allow webcam access
+  • Perform hand signs in front of the camera
+
+Manual start (alternative)
+  • Open Command Prompt in this folder
+  • Run:  python run_server.py
+  • Open browser:  http://127.0.0.1:8000/
+
+Troubleshooting
+  • ERR_CONNECTION_REFUSED → server not running; run start.bat
+  • Camera blocked → allow camera in browser site settings
+  • Module not found → run install.bat again
+
+Files you need (do not delete)
+  • backend/models/hand_landmarker.task
+  • backend/models/isl_classifier.joblib
+  • frontend/  (web UI)
+  • run_server.py, start.bat, install.bat
